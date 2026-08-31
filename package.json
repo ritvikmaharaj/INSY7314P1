@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "dev": "nodemon index.js"
-},
- "keywords": [],
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -15,6 +15,7 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
     "express-validator": "^7.3.2",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.9.4"
@@ -23,4 +24,3 @@
     "nodemon": "^3.1.14"
   }
 }
-

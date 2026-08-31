@@ -52,7 +52,8 @@ const register = async (req, res, next) => {
             });
         }
 
-        const passwordHash = await bcrypt.hash(password, 12);
+       const SALT_ROUNDS = parseInt(process.env.BCRYPT_SALT_ROUNDS, 10) || 12;
+       const passwordHash = await bcrypt.hash(password, SALT_ROUNDS);
 
         const user = await User.create({
             fullName: fullName.trim(),
