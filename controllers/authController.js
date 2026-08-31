@@ -51,7 +51,9 @@ const register = async (req, res, next) => {
             return res.status(409).json({ error: "User already exists."
             });
         }
-
+       // --- Added by Saheel Bhugwandeen ---
+        // Bcrypt cost factor is now configurable via env var instead of
+        // hardcoded, so it can be tuned per environment without code changes
        const SALT_ROUNDS = parseInt(process.env.BCRYPT_SALT_ROUNDS, 10) || 12;
        const passwordHash = await bcrypt.hash(password, SALT_ROUNDS);
 

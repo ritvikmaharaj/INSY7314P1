@@ -1,5 +1,9 @@
 require("dotenv").config();
 
+// --- Added by Saheel Bhugwandeen ---
+// Validate required env vars (JWT_SECRET, MONGO_URI) and secret strength
+// BEFORE the app starts - fails fast with a clear error instead of running
+// with broken/insecure auth
 const validateEnv = require("./config/validateEnv");
 validateEnv();
 

@@ -1,3 +1,8 @@
+// Author: Saheel Bhugwandeen
+// Role-based access control (RBAC) middleware.
+// Runs AFTER authMiddleware's `protect`, which attaches req.user from the JWT.
+// Restricts specific routes to specific user roles (e.g. only "freelancer"
+// can create a gig, only "client" can make a booking).
 const authorize = (...allowedRoles) => {
     return (req, res, next) => {
         if (!req.user || !req.user.role) {

@@ -1,3 +1,8 @@
+// Author: Saheel Bhugwandeen
+// Validates that all required environment variables are present and secure
+// before the server starts. Prevents the app from running in a broken or
+// insecure state (e.g. missing JWT secret causing silent auth failures).
+
 const requiredEnvVars = ["JWT_SECRET", "MONGO_URI"];
 
 const validateEnv = () => {
