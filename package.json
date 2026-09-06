@@ -18,9 +18,14 @@
     "express-rate-limit": "^8.7.0",
     "express-validator": "^7.3.2",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.4"
+    "mongoose": "^9.9.5",
+    "node-gyp": "^13.0.2",
+    "rebuild": "^0.1.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true
   }
 }
