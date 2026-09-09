@@ -22,7 +22,7 @@ connectDB();
 
 //Added by Chase Miller
 // set servers port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 
 const USE_HTTPS = process.env.USE_HTTPS === 'true'; 
 
